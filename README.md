@@ -1,2 +1,2 @@
 # jsf-primefaces-algaworks
-JSF e Primefaces Essencial
+Projeto desenvolvido com JSF, Primefaces, JPA com Hibernate, Java 8 e SGBD MySQL
