@@ -45,3 +45,5 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 
 
 e depois clicar no projeto> maven> update project e marcar em Force Update of Snapshots e ok
+
+http://localhost:8080/jsf-primefaces-essencial-algaworks/GestaoEmpresas.xhtml --> url
