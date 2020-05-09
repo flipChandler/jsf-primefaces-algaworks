@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      lang="pt-BR">
 <h:head>
 
 <meta charset="UTF-8" />
@@ -11,15 +12,56 @@
 <h:outputStylesheet library="algaworks" name="estilo.css" />
 </h:head>
 
-<body>
+<h:body>
 	<header>
 		<h:graphicImage library="algaworks" name="logo.png" />
 	</header>
 
-	<h:outputText value="Olá" />
+	<div class="conteudo">
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Razão Social: " for="razaoSocial"/>
+				<h:inputText id="razaoSocial"/>
+				
+				<h:outputLabel value="Nome Fantasia: " for="nomeFantasia" />
+				<h:inputText id="nomeFantasia" />
+				
+				<h:outputLabel value="Tipo Empresa" for="tipo"/>
+				<h:selectOneMenu id="tipo">
+					<f:selectItem itemLabel="Selecione..."/>
+					<f:selectItem itemLabel="MEI" itemValue="MEI"/>
+					<f:selectItem itemLabel="LTDA" itemValue="LTDA"/>					
+				</h:selectOneMenu>
+				<h:outputLabel/>
+				<h:commandButton value="Salvar"/>
+			</h:panelGrid>
+			<h:dataTable value="#{[0,0,0,0]}">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Razão Social" />
+					</f:facet>
+					<h:outputText value="Algaworks Softwares, Treinamentos LTDA" />
+				</h:column>	
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Nome Fantasia" />
+					</f:facet>
+					<h:outputText value="Algaworks" />
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Tipo Empresa" />
+					</f:facet>
+					<h:outputText value="LTDA" />
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</div>
 	
 	<footer>
-		Curso JSF e Primefaces - Essencial
+		<p>&#169;Felipe Santos</p>
 	</footer>
-</body>
+</h:body>
 </html>
