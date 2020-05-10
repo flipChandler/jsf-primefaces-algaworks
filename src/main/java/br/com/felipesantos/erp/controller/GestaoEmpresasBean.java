@@ -30,5 +30,9 @@ public class GestaoEmpresasBean implements Serializable{
 				+ " - Tipo: " + empresa.getTipo());
 	}
 	
+	public String ajuda() {
+		return "AjudaGestaoEmpresas";
+	}
+	
 	
 }
